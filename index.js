@@ -30,6 +30,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.send('Working!');
+});
+
 app.post('/send-notification', async (req, res) => {
   const { token, title, body } = req.body;
   const messaging = getMessaging();
