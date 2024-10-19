@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
   res.send('Working!');
 });
 
-app.post('/send-notification', async (req, res) => {
+app.post('/send-notification-secure', async (req, res) => {
   const { token, title, body } = req.body;
   const messaging = getMessaging();
   const message = {
